@@ -1,8 +1,8 @@
 import torch.nn as nn
 
 class Net(nn.Module):
-    def _init_(self, n_features):
-        super()._init_()
+    def __init__(self, n_features):
+        super().__init__()
         self.net = nn.Sequential(
             nn.Linear(n_features, 32),
             nn.ReLU(),
